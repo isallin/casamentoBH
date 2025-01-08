@@ -1,0 +1,33 @@
+@use 'variaveis';
+
+.hero{
+    width: 100%;
+    min-height: 100vh;
+
+    //Background imagem
+    background-image: url(/src/images/heroWallpaper4.png);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: -1;
+
+    //Estrutura
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.pagetitlediv {
+    margin-top: auto; // Empurra o título para o final da section.hero
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; // Ocupa toda a largura disponível
+    height: 50vh;
+}
+
+.pagetitle{
+    font-family: "Playwrite IS", serif;
+}

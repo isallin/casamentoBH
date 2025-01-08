@@ -1,0 +1,86 @@
+@use 'variaveis';
+@use 'hero';
+@use 'header';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Quicksand", serif;
+    text-decoration: none;
+}
+
+//TEXTOS
+@mixin text($fontSize: 18px) {
+    font-size: $fontSize;
+    line-height: #{$fontSize + 10px};
+    color: variaveis.$corTextoPrincipal;
+}
+
+.text--small {
+    @include text(16px);
+
+    @media (max-width:768px){
+        @include text(14px)
+    }
+
+    @media screen and (min-width:641px) and (max-width:1023px){
+        @include text(15px)
+    }
+}
+
+.text {
+    @include text();
+
+    @media (max-width:768px){
+        @include text(20px)
+    }
+
+    @media screen and (min-width:641px) and (max-width:1023px){
+        @include text(21px)
+    }
+}
+
+.text--big {
+    @include text(32px);
+    
+    @media (max-width:768px){
+        @include text(30px)
+    }
+
+    @media screen and (min-width:641px) and (max-width:1023px){
+        @include text(31px)
+    }
+}
+
+//TÍTULOS
+@mixin title($fontSize: 40px) {
+    @include text ($fontSize);
+    font-size: $fontSize;
+    color: variaveis.$corTextoPrincipal;
+}
+
+.title {
+    @include title();
+
+    @media (max-width:768px){
+        @include title(38px)
+    }
+
+    @media screen and (min-width:641px) and (max-width:1023px){
+        @include title(39px)
+    }
+}
+
+.title--big {
+    @include title(72px);
+
+    @media (max-width:768px){
+        @include title(70px)
+    }
+
+    @media screen and (min-width:641px) and (max-width:1023px){
+        @include title(71px)
+    }
+}
