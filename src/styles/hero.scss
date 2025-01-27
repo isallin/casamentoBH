@@ -3,6 +3,7 @@
 .hero{
     width: 100%;
     min-height: 100vh;
+    color: variaveis.$corTextoPrincipal;
 
     //Background imagem
     background-image: url(/src/images/heroWallpaper4.png);
@@ -10,8 +11,6 @@
     background-position: center;
     overflow: hidden;
     background-repeat: no-repeat;
-    position: fixed;
-    z-index: -1;
 
     //Estrutura
     display: flex;
@@ -26,8 +25,19 @@
     align-items: center;
     width: 100%; // Ocupa toda a largura disponível
     height: 50vh;
-}
 
-.pagetitle{
-    font-family: "Playwrite IS", serif;
+    @media (max-width: 1023px){
+        height: 100%;
+        margin:auto;
+    }
+
+    & .pagetitle{
+        font-family: "Playwrite IS", serif;
+        
+        @media (max-width: 1023px){
+            width: 80%;
+            text-align: center;
+        }
+    }
+
 }

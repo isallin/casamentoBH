@@ -1,0 +1,35 @@
+@use 'variaveis';
+
+.dicas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5vw;
+    width: 80%;
+
+    @media (max-width: 768px){
+        display: block;
+        width: 85%;
+    }
+
+    &__div{
+        background-color: #fff;
+        padding-bottom: 40px;
+
+        @media (max-width: 768px){
+            margin-bottom: 10vw;
+        }
+        
+        & h3 {
+            padding-bottom: 10px;
+        }
+
+        & p {
+            padding: 0 5vw;
+        }
+
+        &__img{
+            padding-bottom: 20px;
+            width: 100%;
+        }
+    }
+}

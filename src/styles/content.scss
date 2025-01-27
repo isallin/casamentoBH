@@ -1,0 +1,57 @@
+@use 'variaveis';
+
+.content{
+    background-image: url(/src/images/texturaAqua.png);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    padding-top: 10vw;
+    color: #597a41;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-bottom: 2px solid variaveis.$corVerdeFundo;
+
+    &__item{
+        padding: 9vh 0;
+        width: 70vw;
+
+        &__symbol{
+            width: 20vw;
+            @media (max-width:768px){
+                width: 50vw;
+            }
+        }
+
+        &__img{
+            margin-top: 50px;
+            height: 100%;
+
+            @media (max-width:768px){
+                height: 75vw;
+            }
+        }
+    }
+
+    &__title{
+        padding-top: 100px;
+    }
+}
+
+.contact{
+    border-top: 2px solid variaveis.$corVerdeFundo;
+    margin-top: 20vw;
+    padding-top: 50px;
+    width: 100%;
+    font-size: 50px;
+    padding-bottom: 50px;
+
+    &__link{
+    }
+}
+
+.logo{
+    padding-bottom: 50px;
+}

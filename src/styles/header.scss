@@ -8,11 +8,14 @@
     width: 100%;
     background-color: variaveis.$corVerdeFundo;
     z-index: 100;
+    box-shadow: 8px 8px 8px rgb(0, 0, 0, 0.3);
+    color: variaveis.$corTextoPrincipal;
 }
 
 /*=============== NAV ===============*/
 .nav {
-    height: 3.5rem;
+    height: 5rem;
+    padding: 0 2vw;
 
     &__data {
         height: 100%;
@@ -60,7 +63,7 @@
             left: 0;
             top: 2.5rem;
             width: 100%;
-            height: calc(100vh - 3.5rem);
+            height: calc(100vh - 5rem);
             overflow: auto;
             pointer-events: none;
             opacity: 0;
@@ -73,20 +76,16 @@
 
         &__list {
             background-color: variaveis.$corVerdePrincipal;
+            margin-top: 25px
         }
     }
 
     &__link {
-        background-color: variaveis.$corVerdePrincipal;
         padding: 1.25rem 1.5rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
         transition: background-color .3s;
-
-        &:hover {
-            background-color: variaveis.$corVerdeHover;
-        }
     }
 }
 
@@ -110,6 +109,7 @@
 
 /*=============== DROPDOWN ===============*/
 .dropdown {
+    
     &__item {
         cursor: pointer;
     }
@@ -120,10 +120,10 @@
         transition: transform .4s;
     }
 
-    &__link,
-    &__sublink {
+    &__link {
         padding: 1.25rem 1.25rem 1.25rem 2.5rem;
         background-color: variaveis.$corVerdePrincipal;
+        color: variaveis.$corTextoPrincipal;
         display: flex;
         align-items: center;
         column-gap: .5rem;

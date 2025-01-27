@@ -1,0 +1,47 @@
+@use 'variaveis';
+
+.contagem{
+    display: flex;
+    justify-content: center;
+    color: variaveis.$corTextoPrincipal;
+    padding: 50px 0;
+
+    @media (max-width: 768px){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px 5px;
+        width: 95%;
+    }
+
+    &__div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 25vh;
+        border-radius: 25px;
+        margin: 0 .6rem;
+        position: relative;
+        background-color: variaveis.$corVerdeFundo;
+        box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.3);
+
+        @media (max-width: 768px){
+            width: 95%;
+            height: 20vh;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+        
+            & span{
+                width: 100%;
+                bottom: 0;
+                position: absolute;
+                padding-bottom: 10px;
+
+                @media (max-width: 768px){
+                    padding-bottom: 5px;
+                }
+            }
+    }
+}

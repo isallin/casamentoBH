@@ -1,6 +1,11 @@
 @use 'variaveis';
 @use 'hero';
 @use 'header';
+@use 'breakpoints';
+@use 'contagem';
+@use 'content';
+@use 'carousel';
+@use 'dicas';
 
 * {
     margin: 0;
@@ -10,77 +15,15 @@
     font-family: "Quicksand", serif;
     text-decoration: none;
 }
+.container{
+    max-width: 100%;
+    text-align: center;
 
-//TEXTOS
-@mixin text($fontSize: 18px) {
-    font-size: $fontSize;
-    line-height: #{$fontSize + 10px};
-    color: variaveis.$corTextoPrincipal;
-}
-
-.text--small {
-    @include text(16px);
-
-    @media (max-width:768px){
-        @include text(14px)
+    @media (max-width: 768px){
+        margin-inline: 1rem;
     }
 
     @media screen and (min-width:641px) and (max-width:1023px){
-        @include text(15px)
-    }
-}
-
-.text {
-    @include text();
-
-    @media (max-width:768px){
-        @include text(20px)
-    }
-
-    @media screen and (min-width:641px) and (max-width:1023px){
-        @include text(21px)
-    }
-}
-
-.text--big {
-    @include text(32px);
-    
-    @media (max-width:768px){
-        @include text(30px)
-    }
-
-    @media screen and (min-width:641px) and (max-width:1023px){
-        @include text(31px)
-    }
-}
-
-//TÍTULOS
-@mixin title($fontSize: 40px) {
-    @include text ($fontSize);
-    font-size: $fontSize;
-    color: variaveis.$corTextoPrincipal;
-}
-
-.title {
-    @include title();
-
-    @media (max-width:768px){
-        @include title(38px)
-    }
-
-    @media screen and (min-width:641px) and (max-width:1023px){
-        @include title(39px)
-    }
-}
-
-.title--big {
-    @include title(72px);
-
-    @media (max-width:768px){
-        @include title(70px)
-    }
-
-    @media screen and (min-width:641px) and (max-width:1023px){
-        @include title(71px)
+        margin-inline: auto;
     }
 }
