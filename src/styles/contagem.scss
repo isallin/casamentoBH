@@ -6,11 +6,15 @@
     color: variaveis.$corTextoPrincipal;
     padding: 50px 0;
 
-    @media (max-width: 768px){
+    @media (max-width: 640px){
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 15px 5px;
         width: 95%;
+    }
+
+    @media screen and (min-width:641px) and (max-width:1023px){
+        width: 98%;
     }
 
     &__div{
@@ -26,7 +30,7 @@
         background-color: variaveis.$corVerdeFundo;
         box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.3);
 
-        @media (max-width: 768px){
+        @media (max-width: 640px){
             width: 95%;
             height: 20vh;
             margin: auto;
@@ -39,7 +43,7 @@
                 position: absolute;
                 padding-bottom: 10px;
 
-                @media (max-width: 768px){
+                @media (max-width: 640px){
                     padding-bottom: 5px;
                 }
             }

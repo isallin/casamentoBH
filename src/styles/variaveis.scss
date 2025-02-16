@@ -13,7 +13,7 @@ $corTextoPrincipal: #fff;
 @mixin text($fontSize: 18px) {
     font-size: $fontSize;
     line-height: #{$fontSize + 10px};
-    font-family: 'Playwrite IS';}
+    font-family: 'Roboto';}
 
 .text--small {
     @include text(16px);

@@ -30,7 +30,6 @@
         column-gap: .25rem;
 
         & i {
-            font-weight: initial;
             font-size: 1.25rem;
         }
     }
@@ -116,7 +115,6 @@
 
     &__arrow {
         font-size: 1.25rem;
-        font-weight: initial;
         transition: transform .4s;
     }
 
@@ -131,7 +129,6 @@
 
         & i {
             font-size: 1.25rem;
-            font-weight: initial;
         }
 
         &:hover {
