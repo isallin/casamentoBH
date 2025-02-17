@@ -1,168 +1,43 @@
 @use 'variaveis';
 
-/*=============== HEADER ===============*/
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     background-color: variaveis.$corVerdeFundo;
-    z-index: 100;
-    box-shadow: 8px 8px 8px rgb(0, 0, 0, 0.3);
-    color: variaveis.$corTextoPrincipal;
-}
+    height: 10vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10vw;
 
-/*=============== NAV ===============*/
-.nav {
-    height: 5rem;
-    padding: 0 2vw;
-
-    &__data {
+    &__logo{
         height: 100%;
         display: flex;
-        justify-content: space-between;
         align-items: center;
-    }
 
-    &__logo {
-        display: inline-flex;
-        align-items: center;
-        column-gap: .25rem;
-
-        & i {
-            font-size: 1.25rem;
+        h1{
+            color: variaveis.$corTextoPrincipal;
         }
     }
 
-    &__toggle {
-        position: relative;
-        width: 32px;
-        height: 32px;
-    }
+        &__menu{
+            height: 100%;
+            display: flex;
+            align-items: center;
 
-    &__burger,
-    &__close {
-        position: absolute;
-        width: max-content;
-        height: max-content;
-        inset: 0;
-        margin: auto; 
-        cursor: pointer;
-        transition: opacity .1s, transform .4s;
-    }
+            &__link{
+                display: flex;
+                color: variaveis.$corTextoPrincipal;
 
-    &__close {
-        opacity: 0;
-    }
+                &__item{
+                    padding: 1vw;
 
-    // Navigation for mobile devices
-    @media screen and (max-width: 1118px) {
-        &__menu {
-            position: absolute;
-            left: 0;
-            top: 2.5rem;
-            width: 100%;
-            height: calc(100vh - 5rem);
-            overflow: auto;
-            pointer-events: none;
-            opacity: 0;
-            transition: top .4s, opacity .3s;
-
-            &::-webkit-scrollbar {
-                width: 0;
+                    & a {
+                        color: variaveis.$corTextoPrincipal;
+                    }
+                }
             }
         }
-
-        &__list {
-            background-color: variaveis.$corVerdePrincipal;
-            margin-top: 25px
-        }
-    }
-
-    &__link {
-        padding: 1.25rem 1.5rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        transition: background-color .3s;
-    }
-}
-
-/* Show menu */
-.show-menu {
-    opacity: 1;
-    top: 3.5rem;
-    pointer-events: initial;
-}
-
-/* Show icon */
-.show-icon .nav__burger {
-    opacity: 0;
-    transform: rotate(90deg);
-}
-
-.show-icon .nav__close {
-    opacity: 1;
-    transform: rotate(90deg);
-}
-
-/*=============== DROPDOWN ===============*/
-.dropdown {
     
-    &__item {
-        cursor: pointer;
-    }
-
-    &__arrow {
-        font-size: 1.25rem;
-        transition: transform .4s;
-    }
-
-    &__link {
-        padding: 1.25rem 1.25rem 1.25rem 2.5rem;
-        background-color: variaveis.$corVerdePrincipal;
-        color: variaveis.$corTextoPrincipal;
-        display: flex;
-        align-items: center;
-        column-gap: .5rem;
-        transition: background-color .3s;
-
-        & i {
-            font-size: 1.25rem;
-        }
-
-        &:hover {
-            background-color: variaveis.$corVerdeHover;
-        }
-    }
-
-    &__menu,
-    &__submenu {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height .4s ease-out;
-    }
-
-    // Show dropdown menu & submenu
-    &__item:hover &__menu,
-    &__subitem:hover>&__submenu {
-        max-height: 1000px;
-        transition: max-height .4s ease-in;
-    }
-
-    // Rotate dropdown icon
-    &__item:hover &__arrow {
-        transform: rotate(180deg);
-    }
 }
 
-/*=============== DROPDOWN SUBMENU ===============*/
-.dropdown {
-    &__add {
-        margin-left: auto;
-    }
-
-    &__sublink {
-        background-color: variaveis.$corVerdePrincipal;
-    }
-}

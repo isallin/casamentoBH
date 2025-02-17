@@ -1,7 +1,6 @@
 @use 'variaveis';
-@use 'hero';
 @use 'header';
-@use 'breakpoints';
+@use 'hero';
 @use 'contagem';
 @use 'content';
 @use 'carousel';
@@ -14,7 +13,9 @@
     list-style: none;
     font-family: "Roboto", serif;
     text-decoration: none;
+    text-decoration: none;
 }
+
 .container{
     max-width: 100%;
     text-align: center;
