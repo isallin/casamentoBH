@@ -1,24 +1,52 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+    // NavBar
+    class MobileNavbar {
+        constructor(mobileMenu, navList, navLinks) {
+            this.mobileMenu = document.querySelector(mobileMenu);
+            this.navList = document.querySelector(navList);
+            this.navLinks = document.querySelectorAll(navLinks);
+            this.activeClass = 'active';
 
-    // Função para mostrar/ocultar menu
-    const showMenu = (toggleId, navId) => {
-        const toggle = document.getElementById(toggleId),
-            nav = document.getElementById(navId);
-        
-        if (toggle && nav) { // Verifica se os elementos existem
-            toggle.addEventListener('click', () => {
-                nav.classList.toggle('show-menu');
-                toggle.classList.toggle('show-icon');
+            // Corrigindo a função de clique
+            this.handleClick = this.handleClick.bind(this);
+        }
+
+        handleClick() {
+            this.navList.classList.toggle(this.activeClass);
+            this.mobileMenu.classList.toggle(this.activeClass);
+            this.animateLinks();
+        }
+
+        animateLinks() {
+            this.navLinks.forEach((link, index) => {
+                link.style.animation
+                    ? (link.style.animation = '')
+                    : (link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`);
             });
         }
-    };
+        
+        init() {
+            if (this.mobileMenu) {
+                this.mobileMenu.addEventListener("click", this.handleClick);
+            }
+            return this;
+        }
 
-    showMenu('nav-toggle', 'nav-menu');
+
+    }
+
+    const mobileNavbar = new MobileNavbar(
+        ".mobileMenu",
+        ".header__menu-link",
+        ".header__menu-link-item"
+    );
+
+    mobileNavbar.init();
 
     //----- CONTAGEM REGRESSIVA -----//
     const dataDoEvento = new Date("Aug 9, 2025 00:00:00").getTime();
 
-    const contaHoras = setInterval(function() {
+    const contaHoras = setInterval(function () {
         const agora = new Date().getTime();
         const distanciaAteEvento = dataDoEvento - agora;
 
@@ -26,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
             clearInterval(contaHoras);
             const contador = document.getElementById('contador');
             if (contador) contador.innerHTML = 'Evento Expirado';
-            
+
             // Oculta os elementos do contador
             ['dias', 'horas', 'minutos', 'segundos'].forEach(id => {
                 const elemento = document.getElementById(id);
@@ -57,23 +85,5 @@ document.addEventListener('DOMContentLoaded', function() {
         atualizaElemento('segundos', segundosAteEvento);
 
     }, 1000);
-
-    // Inicialização do Swiper
-    const swiper = new Swiper('.carousel__wrapper', {
-        spaceBetween: 5,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-            0: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1023: { slidesPerView: 3 }
-        }
-    });
 
 });

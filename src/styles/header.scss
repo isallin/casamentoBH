@@ -1,6 +1,8 @@
 @use 'variaveis';
 
 .header {
+    z-index: 100;
+    position: fixed;
     width: 100%;
     background-color: variaveis.$corVerdeFundo;
     height: 10vh;
@@ -10,34 +12,110 @@
     align-items: center;
     padding: 0 10vw;
 
-    &__logo{
+    &__logo {
         height: 100%;
         display: flex;
         align-items: center;
 
-        h1{
+        h1 {
             color: variaveis.$corTextoPrincipal;
+            font-weight: 400;
+            font-size: 1.2em;
+            letter-spacing: 0.2rem;
+            cursor: default;
         }
     }
 
-        &__menu{
-            height: 100%;
+    &__menu {
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        &-link {
             display: flex;
-            align-items: center;
+            color: variaveis.$corTextoPrincipal;
 
-            &__link{
-                display: flex;
-                color: variaveis.$corTextoPrincipal;
+            &-item {
+                padding: .4vw;
 
-                &__item{
-                    padding: 1vw;
+                i {
+                    font-size: 1.5em;
+                    font-weight: 90;
+                    opacity: 0;
 
-                    & a {
-                        color: variaveis.$corTextoPrincipal;
+                    @media (max-width: 1333px) {
+                        opacity: 1;
                     }
                 }
+
+                a {
+                    color: variaveis.$corMenu;
+                    transition: 0.2s ease-in-out;
+
+                    &:hover {
+                        color: variaveis.$corTextoPrincipal;
+                        font-weight: 600;
+                    }
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                @media (max-width: 1333px) {
+                    opacity: 0;
+                }
             }
+
+            @media (max-width: 1333px) {
+                z-index: 99;
+                position: fixed;
+                right: 0;
+                width: 50vw;
+                height: 90vh;
+                top: 10vh;
+                background-color: variaveis.$corVerdePrincipal;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in-out;
+
+                &.active {
+                    transform: translateX(0);
+                }
+
+                @media (max-width:768px){
+                    width: 100%;
+                }
+            }
+
         }
+    }
+
+    .mobileMenu {
+        font-size: 3em;
+        cursor: pointer;
+        display: none;
+        width: 100%;
+        text-align: right;
+        color: variaveis.$corTextoPrincipal;
+
+        @media (max-width: 1333px) {
+            display: block;
+        }
+    }
     
 }
 
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

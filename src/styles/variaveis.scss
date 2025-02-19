@@ -1,18 +1,14 @@
 /*CORES PRINCIPAIS DO SITE*/
 $corVerdePrincipal: #75935E;
 $corVerdeFundo: #597a41;
-$corVerdeHover: #85a86b;
+$corMenu: #def1cd;
 $corTextoPrincipal: #fff;
-
-
-
 
 /////-----------TAMANHO DOS TEXTOS-----------/////
 
 /////-----------TEXTO NORMAl-----------/////
 @mixin text($fontSize: 18px) {
     font-size: $fontSize;
-    line-height: #{$fontSize + 10px};
 }
 
 .text--small {
@@ -22,7 +18,7 @@ $corTextoPrincipal: #fff;
         @include text(13px)
     }
 
-    @media screen and (min-width:641px) and (max-width:1023px){
+    @media screen and (min-width:769px) and (max-width:1023px){
         @include text(12px)
     }
 }
@@ -34,7 +30,7 @@ $corTextoPrincipal: #fff;
         @include text(20px)
     }
 
-    @media screen and (min-width:641px) and (max-width:1023px){
+    @media screen and (min-width:769px) and (max-width:1023px){
         @include text(21px)
     }
 }
@@ -46,7 +42,7 @@ $corTextoPrincipal: #fff;
         @include text(24px)
     }
 
-    @media screen and (min-width:641px) and (max-width:1023px){
+    @media screen and (min-width:769px) and (max-width:1023px){
         @include text(29px)
     }
 }
@@ -64,7 +60,7 @@ $corTextoPrincipal: #fff;
         @include title(45px)
     }
 
-    @media screen and (min-width:641px) and (max-width:1023px){
+    @media screen and (min-width:769px) and (max-width:1023px){
         @include title(39px)
     }
 }
@@ -76,7 +72,7 @@ $corTextoPrincipal: #fff;
         @include title(70px)
     }
 
-    @media screen and (min-width:641px) and (max-width:1023px){
+    @media screen and (min-width:769px) and (max-width:1023px){
         @include title(71px)
     }
 }
@@ -94,25 +90,27 @@ $corTextoPrincipal: #fff;
         @include timertext(48px)
     }
 
-    @media screen and (min-width:641px) and (max-width:1023px){
+    @media screen and (min-width:769px) and (max-width:1023px){
         @include timertext(50px)
     }
 }
 
 /////-----------UX-----------/////
-@mixin menuText($fontSize: 50px) {
-    @include text ($fontSize);
+@mixin menuText($fontSize: 1.1em) {
     font-size: $fontSize;
+    font-weight: 500;
 }
 
 .menuText {
     @include menuText();
+    font-family: "Raleway", serif;
+    letter-spacing: .13rem;
 
     @media (max-width:768px){
-        @include menuText(40px)
+        @include menuText(1.3em)
     }
 
-    @media screen and (min-width:641px) and (max-width:1023px){
-        @include menuText(45px)
+    @media screen and (min-width:769px) and (max-width:1023px){
+        @include menuText(1.1em)
     }
 }
