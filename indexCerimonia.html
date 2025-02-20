@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Knewave&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <title>Bruna & Henrique</title>
+    <link rel="stylesheet" href="dist/css/main.css">
+</head>
+
+<body>
+
+    <!--======== HEADER ========-->
+    <header class="header">
+        <div class="header__logo">
+            <h1>BRUNA & HENRIQUE</h1>
+            <span>B&H</span>
+        </div>
+        <div class="mobileMenu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <div class="header__menu">
+            <ul class="header__menu-link">
+                <li class="header__menu-link-item">
+                    <i class="ri-home-line"></i>
+                    <a class="menuText" href="/index.html">Home</a>
+                </li>
+                <li class="header__menu-link-item">
+                    <i class="ri-calendar-schedule-line"></i>
+                    <a class="menuText" href="/indexCerimonia.html">Cerimônia</a>
+                </li>
+                <li class="header__menu-link-item">
+                    <i class="ri-book-open-line"></i>
+                    <a class="menuText" href="/indexHistoria.html">Nossa história</a>
+                </li>
+                <li class="header__menu-link-item">
+                    <i class="ri-shirt-line"></i>
+                    <a class="menuText" href="/indexDicas.html">Dicas</a>
+                </li>
+                <li class="header__menu-link-item">
+                    <i class="ri-gift-line"></i>
+                    <a class="menuText" href="/indexPresentes.html">Presentes</a>
+                </li>
+                <li class="header__menu-link-item">
+                    <i class="ri-checkbox-line"></i>
+                    <a class="menuText" href="/indexPresenca.html">Presença</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="content">
+        <!--=============== ///////////// CERIMONIA ///////////// ===============-->
+        <section class="paginaCerimonia" id="paginaCerimonia">
+            <h1 class="title content__title">Cerimônia</h1>
+            <p class="text--big content__item">Confira as informações</p>
+            <img class="content__item__symbol" src="/src/images/champagne.png">
+            <p class="text--big content__item">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+            </p>
+
+            <h3 class="title content__item">Quinta da Cantareira<br>Mairiporã</h3>
+            <p class="text--big content__item">09 de agosto de 2025</p>
+            <div class="carousel">
+                <div class="carousel__wrapper swiper">
+                    <div class="carousel__wrapper__list swiper-wrapper">
+                        <div class="carousel__wrapper__list__item swiper-slide" >
+                            <img src="/src/images/quintaCant_01.webp"
+                            class="carousel__wrapper__list__item__card">
+                        </div>
+                        <div class="carousel__wrapper__list__item swiper-slide" >
+                            <img src="/src/images/quintaCant_02.jpg"
+                            class="carousel__wrapper__list__item__card">
+                        </div>
+                        <div class="carousel__wrapper__list__item swiper-slide" >
+                            <img src="/src/images/quintaCant_03.jpeg"
+                            class="carousel__wrapper__list__item__card">
+                        </div>
+                        <div class="carousel__wrapper__list__item swiper-slide" >
+                            <img src="/src/images/quintaCant_04.jpg"
+                            class="carousel__wrapper__list__item__card">
+                        </div>
+        
+                    </div>
+        
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+            </div>
+            <p class="text--big content__item">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore.
+            </p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3662.2304518108103!2d-46.619752325242516!3d-23.379878978924882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef1bcadd738db%3A0xc03c3d98e489467b!2sQuinta%20da%20Cantareira!5e0!3m2!1spt-PT!2stw!4v1737957810372!5m2!1spt-PT!2stw"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <!--=============== ///////////// CONTATO ///////////// ===============-->
+        <section class="contact">
+            <i class="contact__link ri-whatsapp-line"></i>
+            <i class="contact__link ri-instagram-line"></i>
+        </section>
+        
+        <a class="logo text">B & H</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./dist/js/main.js"></script>
+</body>
+
+</html>

@@ -1,8 +1,10 @@
 /*CORES PRINCIPAIS DO SITE*/
+$corTextoPrincipal: #fff;
 $corVerdePrincipal: #75935E;
 $corVerdeFundo: #597a41;
-$corMenu: #def1cd;
-$corTextoPrincipal: #fff;
+$corTextoMenu: #b6c9a5;
+$corTextoMobile: #daf0c9;
+$corHoverMenu: #496834;
 
 /////-----------TAMANHO DOS TEXTOS-----------/////
 
@@ -33,17 +35,17 @@ $corTextoPrincipal: #fff;
     @media screen and (min-width:769px) and (max-width:1023px){
         @include text(21px)
     }
+
+    @media screen and (min-width: 1024px) and (max-width:1392px){
+        @include text(24px)
+    }
 }
 
 .text--big {
-    @include text(30px);
+    @include text(1.5em);
     
     @media (max-width:768px){
-        @include text(24px)
-    }
-
-    @media screen and (min-width:769px) and (max-width:1023px){
-        @include text(29px)
+        @include text(1.3em)
     }
 }
 
@@ -78,7 +80,7 @@ $corTextoPrincipal: #fff;
 }
 
 /////-----------CONTAGEM REGRESSIVA-----------/////
-@mixin timertext($fontSize: 50px) {
+@mixin timertext($fontSize: 65px) {
     @include text ($fontSize);
     font-size: $fontSize;
 }
@@ -87,11 +89,11 @@ $corTextoPrincipal: #fff;
     @include timertext();
 
     @media (max-width:768px){
-        @include timertext(48px)
+        @include timertext(55px)
     }
 
     @media screen and (min-width:769px) and (max-width:1023px){
-        @include timertext(50px)
+        @include timertext(60px)
     }
 }
 
@@ -105,9 +107,11 @@ $corTextoPrincipal: #fff;
     @include menuText();
     font-family: "Raleway", serif;
     letter-spacing: .13rem;
+    color: $corTextoMenu;
 
     @media (max-width:768px){
-        @include menuText(1.3em)
+        @include menuText(1.3em);
+        color: $corTextoMobile;
     }
 
     @media screen and (min-width:769px) and (max-width:1023px){

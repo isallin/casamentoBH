@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // NavBar
+    //----- MENU -----//
     class MobileNavbar {
         constructor(mobileMenu, navList, navLinks) {
             this.mobileMenu = document.querySelector(mobileMenu);
@@ -7,14 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
             this.navLinks = document.querySelectorAll(navLinks);
             this.activeClass = 'active';
 
-            // Corrigindo a função de clique
             this.handleClick = this.handleClick.bind(this);
-        }
-
-        handleClick() {
-            this.navList.classList.toggle(this.activeClass);
-            this.mobileMenu.classList.toggle(this.activeClass);
-            this.animateLinks();
         }
 
         animateLinks() {
@@ -24,7 +17,17 @@ document.addEventListener('DOMContentLoaded', function () {
                     : (link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`);
             });
         }
-        
+
+        handleClick() {
+            this.navList.classList.toggle(this.activeClass);
+            this.mobileMenu.classList.toggle(this.activeClass);
+            this.animateLinks();
+        }
+
+        addClickEvent() {
+            this.mobileMenu.addEventListener("click", this.handleClick);
+        }
+
         init() {
             if (this.mobileMenu) {
                 this.mobileMenu.addEventListener("click", this.handleClick);
@@ -43,6 +46,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     mobileNavbar.init();
 
+    //----- MENU ATIVO -----//
+    const activePage = window.location.pathname;
+    const navLinks = document.querySelectorAll('.menuText').forEach(link => {
+        if (link.href.includes(`${activePage}`)) {
+            link.classList.add('active');
+            console.log(link);
+        }
+    })
+
     //----- CONTAGEM REGRESSIVA -----//
     const dataDoEvento = new Date("Aug 9, 2025 00:00:00").getTime();
 
@@ -55,7 +67,6 @@ document.addEventListener('DOMContentLoaded', function () {
             const contador = document.getElementById('contador');
             if (contador) contador.innerHTML = 'Evento Expirado';
 
-            // Oculta os elementos do contador
             ['dias', 'horas', 'minutos', 'segundos'].forEach(id => {
                 const elemento = document.getElementById(id);
                 if (elemento) elemento.style.display = 'none';
@@ -87,3 +98,31 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 1000);
 
 });
+
+    //----- CARROSSEL -----//
+    const swiper = new Swiper('.carousel__wrapper', {
+        spaceBetween: 5,
+
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        breakpoints: {
+            0: {
+                slidesPerView: 1
+            },
+            768: {
+                slidesPerView: 2
+            },
+            1023: {
+                slidesPerView: 3
+            }
+        }
+
+    });
