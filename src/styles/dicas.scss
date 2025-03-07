@@ -15,20 +15,21 @@
 
     @media (max-width: 768px){
         display: block;
-        width: 70%;
+        width: 90%;
     }
 
-    @media screen and (min-width:769px) and (max-width:1023px){
-        width: 80%;
+    @media (max-width:1023px) {
+        width: 85%;
     }
 
     @media screen and (min-width: 1024px) and (max-width:1392px){
-        width: 75%;
+        width: 80%;
     }
 
     &__div{
         background-color: #fff;
         padding-bottom: 40px;
+        box-shadow: 6px 6px 6px rgb(0, 0, 0, 0.2);
 
         @media (max-width: 768px){
             margin-bottom: 10vw;

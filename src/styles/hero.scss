@@ -25,6 +25,7 @@
     align-items: center;
     width: 100%; // Ocupa toda a largura disponível
     height: 50vh;
+    flex-direction: column;
 
     @media (max-width: 1023px){
         height: 100%;
@@ -32,8 +33,6 @@
     }
 
     & .pagetitle{
-        font-family: "Roboto", serif;
-        
         @media (max-width: 1023px){
             width: 80%;
             text-align: center;

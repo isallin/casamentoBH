@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
         atualizaElemento('segundos', segundosAteEvento);
 
     }, 1000);
-
+    
 });
 
     //----- CARROSSEL -----//

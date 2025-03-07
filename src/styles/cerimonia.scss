@@ -45,3 +45,19 @@
         }
     }
 }
+
+.googleMaps{
+    width:70%;
+    height:450px;
+    border:0;
+
+    @media (max-width: 768px){
+        width: 95%;
+        height:350px;
+    }
+
+    @media screen and (min-width:769px) and (max-width:1023px){
+        width: 85%;
+    }
+
+}

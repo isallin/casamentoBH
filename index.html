@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Knewave&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Knewave&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <title>Bruna & Henrique</title>
     <link rel="stylesheet" href="dist/css/main.css">
@@ -59,47 +61,75 @@
     <section class="hero">
         <!--=============== TÍTULO PRINCIPAL ===============-->
         <div class="pagetitlediv">
-            <h1 class="title pagetitle">Bruna & Henrique</h1>
+            <h1 class="title--big pagetitle">Bruna e Henrique</h1>
+            <p class="text--big">09 de Agosto de 2025</p>
         </div>
     </section>
 
     <div class="content">
-        <section class="paginaPrincipal" id="paginaPrincipal">
-            <h2 class="title">Contagem Regressiva</h2>
-            <div class="contagem text">
-                <div class="contagem__div">
-                    <p class="timertext" id="dias"></p>
-                    <span class="text">Dias</span>
+        <div class="container">
+            <section class="paginaPrincipal" id="paginaPrincipal">
+                <h2 class="title">Contagem Regressiva</h2>
+                <div class="contagem text">
+                    <div class="contagem__div">
+                        <p class="timertext" id="dias"></p>
+                        <span class="text">Dias</span>
+                    </div>
+                    <div class="contagem__div">
+                        <p class="timertext" id="horas">000</p>
+                        <span class="text">Horas</span>
+                    </div>
+                    <div class="contagem__div">
+                        <p class="timertext" id="minutos">000</p>
+                        <span class="text">Minutos</span>
+                    </div>
+                    <div class="contagem__div">
+                        <p class="timertext" id="segundos">000</p>
+                        <span class="text">Segundos</span>
+                    </div>
                 </div>
-                <div class="contagem__div">
-                    <p class="timertext" id="horas">000</p>
-                    <span class="text">Horas</span>
-                </div>
-                <div class="contagem__div">
-                    <p class="timertext" id="minutos">000</p>
-                    <span class="text">Minutos</span>
-                </div>
-                <div class="contagem__div">
-                    <p class="timertext" id="segundos">000</p>
-                    <span class="text">Segundos</span>
-                </div>
-            </div>
 
-            <!--======== TEXTOS & CONTEÚDO ========-->
-            <p class="text--big content__item">Nosso casamento está chegando e queremos você com a gente!</p>
-            <img class="content__item__symbol" src="/src/images/garrafa.png">
-            <p class="text--big content__item">No dia 09 de agosto de 2025, realizaremos o nosso sonho junto com as
-                pessoas que amamos</p>
-            <img class="content__item__img" src="/src/images/main.jpeg">
-        </section>
+                <!--======== TEXTOS & CONTEÚDO ========-->
+                <p class="text content__text">
+                    Se você está aqui, é porque você é uma pessoa muito especial e gostaríamos de compartilhar este
+                    momento tão importante da vida: o nosso casamento ❤️ <br>
 
-        <!--=============== ///////////// CONTATO ///////////// ===============-->
-        <section class="contact">
-            <i class="contact__link ri-whatsapp-line"></i>
-            <i class="contact__link ri-instagram-line"></i>
-        </section>
-        
-        <a class="logo text">B & H</a>
+                    A cerimônia será realizada na
+                    <a href="https://maps.app.goo.gl/1ySkjzNy94AgpgYK6" target="_blank" rel="noopener noreferrer">Quinta
+                        da Cantareira (Mairiporã)</a>,
+                    com direito a festa e muita
+                    diversão. Para facilitar o planejamento, criamos este site para vocês ficarem por dentro de todos os
+                    detalhes da organização e conseguirem participar. <br>
+
+                    É importante confirmar sua presença com antecedência, é só clicar no menu “Confirme sua Presença” e
+                    preencher os dados necessários. Se quiser nos presentear, escolha algum item da Lista de Casamento.
+                    Fiquem à vontade, aguardamos vocês no nosso grande dia! <br><br>
+
+                    Com carinho, <br>
+                    Bruna e Henrique
+                </p>
+                <p class="text content__text">
+                    If you are here, it's because you are a very special person and we would like to share this
+                    important moment in our life: our wedding ❤️<br>
+
+                    The wedding will be held at
+                    <a href="https://maps.app.goo.gl/1ySkjzNy94AgpgYK6" target="_blank" rel="noopener noreferrer">Quinta
+                        da Cantareira (Mairiporã)</a>,
+                    with parties and lots of fun. To
+                    facilitate planning, we created this website so you can stay up to date with all the details of the
+                    organization and be able to participate.<br>
+
+                    It is important to confirm your presence in advance, just click on the “Confirm your presence” menu
+                    and fill in the necessary data. If you want to give us a gift, choose an item from the Registry.
+                    Make yourself comfortable, we look forward to seeing you on our big day!<br><br>
+
+                    Cheers,<br>
+                    Bruna and Henrique
+                </p>
+                <img class="imgSQ" src="/src/images/main.png">
+            </section>
+        </div>
+
     </div>
 
     <script src="./dist/js/main.js"></script>

@@ -11,20 +11,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 200px;
-        height: 25vh;
+        width: 20vh;
+        height: 20vh;
         border-radius: 25px;
         margin: 0 .6rem;
         position: relative;
         background-color: variaveis.$corVerdeFundo;
         box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.3);
-
-        @media (max-width:1392px){
-            width: 95%;
-            height: 24vh;
-            margin: auto;
-            padding-bottom: 20px;
-        }
 
         & p{
             font-family: "Fugaz One", serif;        
@@ -36,16 +29,33 @@
             position: absolute;
             padding-bottom: 10px;
 
-            @media (max-width: 1023px) {
-                padding-bottom: 5px;
+            @media (max-width:768px) {
+                padding-bottom: 15px;
             }
+
+            @media screen and (min-width:769px) and (max-width:1023px) {
+                padding-bottom: 12px;
+            }
+        }
+
+        @media (max-width:768px) {
+            width: 30vh;
+            height: 15vh;
+            margin: 0 .1rem;
+        }
+    
+        @media screen and (min-width:769px) and (max-width:1023px) {
+            width: 20vh;
+            height: 15vh;
+        }
+    
+        @media screen and (min-width: 1024px) and (max-width:1392px) {
+            width: 20vh;
+            height: 15vh;
         }
     }
 
     @media (max-width: 1392px) {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px 5px;
-        width: 95%;
+        width: 95vw;
     }
 }

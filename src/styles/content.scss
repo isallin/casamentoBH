@@ -1,5 +1,21 @@
 @use 'variaveis';
 
+.container{
+    width: 60vw;
+    
+    @media (max-width:768px) {
+        width: 90vw;
+    }
+
+    @media screen and (min-width:769px) and (max-width:1023px){
+        width: 80vw;
+    }
+
+    @media screen and (min-width: 1024px) and (max-width:1392px){
+        width: 70vw;
+    }
+}
+
 .content {
     background-image: url(/src/images/texturaAqua.png);
     background-size: cover;
@@ -13,21 +29,30 @@
     align-items: center;
     text-align: center;
 
+    &__text{
+        padding: 15px;
+        text-align: left;
+        line-height: 1.7;
+        margin-bottom: 30px;
+
+        & a{
+            color: variaveis.$corVerdePrincipal;
+            text-decoration: underline;
+            font-weight: 700;
+            transition: 0.3s;
+
+            &:hover{
+                color: variaveis.$corHoverMenu;
+            }
+        }
+
+        & span{
+            font-weight: 700;
+        }
+    }
+
     &__item {
         padding: 9vh 0;
-        width: 70vw;
-
-        @media (max-width:768px) {
-            width: 90vw;
-        }
-
-        @media screen and (min-width:769px) and (max-width:1023px){
-            width: 80vw;
-        }
-
-        @media screen and (min-width: 1024px) and (max-width:1392px){
-            width: 85vw;
-        }
 
         &__symbol {
             width: 12vw;
@@ -48,9 +73,10 @@
         &__img {
             height: 35vw;
             margin: 0 2vw;
+            box-shadow: 6px 6px 6px rgb(0, 0, 0, 0.3);
 
             @media (max-width:768px) {
-                height: 100vw;
+                height: 80vw;
             }
 
             @media screen and (min-width:769px) and (max-width:1023px){
@@ -64,6 +90,8 @@
 
         &__imgh{
             width: 50%;
+            box-shadow: 6px 6px 6px rgb(0, 0, 0, 0.2);
+
             @media (max-width:768px) {
                 width: 80%;
             }
@@ -74,6 +102,7 @@
         }
 
         &__imgv{
+            box-shadow: 6px 6px 6px rgb(0, 0, 0, 0.3);
             width: 30%;
             @media (max-width:768px) {
                 width: 80%;
@@ -90,7 +119,6 @@
     }
 
     & h2{
-        font-family: "Corinthia", serif;
         font-size: 6em;
         margin: 0 1vw;
 
@@ -106,12 +134,15 @@
 }
 
 .contact {
-    border-top: 2px solid variaveis.$corVerdeFundo;
     padding-top: 50px;
     width: 100%;
     font-size: 50px;
     padding-bottom: 50px;
     margin-top: 100px;
+
+    @media (max-width:1023px){
+        border-top: 2px solid variaveis.$corVerdeFundo;
+    }
 }
 
 .logo {
@@ -121,12 +152,12 @@
 .paginaPrincipal,
 .paginaCerimonia,
 .paginaDicas,
-.paginaHistoria {
+.paginaHistoria,
+.paginaPresentes {
     padding-bottom: 5vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .carousel {
@@ -139,7 +170,6 @@
     padding: 0 5vw;
 
     @media (max-width: 768px) {
-        background-color: #fff;
         padding: 10vw 0;
     }
 
