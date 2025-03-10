@@ -58,42 +58,26 @@ $corHoverMenu: #96bd7c;
 }
 
 /////-----------TÍTULOS-----------/////
-@mixin title($fontSize: 5em) {
+@mixin title($fontSize: 4em) {
     @include text ($fontSize);
     font-size: $fontSize;
-    font-family: "Corinthia", serif;
 }
 
 .title {
     @include title();
 
     @media (max-width:768px) {
-        @include title(3em)
+        @include title(2em)
     }
 
     @media screen and (min-width:769px) and (max-width:1023px) {
-        @include title(4em)
-    }
-}
-
-.title--small {
-    @include title(4em);
-
-    @media (max-width:768px) {
         @include title(3em)
-    }
-
-    @media screen and (min-width:769px) and (max-width:1023px) {
-        @include title(3.3em)
-    }
-
-    @media screen and (min-width: 1024px) and (max-width:1392px) {
-        @include title(3.5em)
     }
 }
 
 .title--big {
     @include title(7em);
+    font-family: "Corinthia", cursive;
 
     @media (max-width:768px) {
         @include title(4.5em)

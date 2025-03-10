@@ -5,6 +5,12 @@ $(document).ready(function(){
             nome: {
                 required: true
             },
+            presenca:{
+                required: true,
+            },
+            adultos:{
+                required: true
+            },
             email: {
                 required: true,
                 email: true
