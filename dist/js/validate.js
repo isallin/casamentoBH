@@ -1,1 +1,1 @@
-$(document).ready(function(){$("#telefone").mask("(00) 00000-0000"),$("form").validate({rules:{nome:{required:!0},presenca:{required:!0},adultos:{required:!0},email:{required:!0,email:!0},telefone:{required:!0}}})});
+$(document).ready(function(){$("form").validate({rules:{nome:{required:!0},presenca:{required:!0},adultos:{required:!0},email:{required:!0,email:!0},telefone:{required:!0}}})});
