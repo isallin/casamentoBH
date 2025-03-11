@@ -7,25 +7,25 @@ const htmlmin = require('gulp-htmlmin')
 function scripts(){
     return gulp.src('./src/scripts/*.js')
     .pipe(uglify())
-    .pipe(gulp.dest('./dist/js'))
+    .pipe(gulp.dest('./public/js'))
 }
 
 function images(){
     return gulp.src('./src/images/*')
     .pipe(imagemin())
-    .pipe(gulp.dest('./dist/images'));
+    .pipe(gulp.dest('./public/images'));
 }
 
 function styles(){
     return gulp.src('./src/styles/*.scss')
     .pipe(sass({outputStyle:'compressed'}))
-    .pipe(gulp.dest('./dist/css'));
+    .pipe(gulp.dest('./public/css'));
 }
 
 function html() {
     return gulp.src('./src/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest('./public'))
 }
 
 exports.default = gulp.parallel(html, styles, images, scripts)
